@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-file.css" type="text/css"/>
+    <title>Komputer store</title>
+    <header class="header"><h1>Komputer Store</h1></header>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="container-block">    
+                <h1 class="container-block-h1">Joe Banker</h1>
+                <p id="UserBalance">
+                    User Balance: 200
+                </p>
+                <p id="UserLoan">
+                    Loan: 0
+                </p>
+                <p id="TotalBalance">
+                    Total Balance: 200
+                </p>
+                <button class="button" id="GetLoanButton">
+                    Get a loan
+                </button>
+            </div>
+            <div class="container-block">
+                <h1 class="container-block-h1">Work</h1>
+                <p id="Pay">
+                    Pay: 0
+                </p>
+                <button class="button" id="BankButton">
+                    Bank
+                </button>
+                <button class="button" id="WorkButton">
+                    Work
+                </button>
+                <button class="button" id="RepayButton" hidden>
+                    Repay Loan
+                </button>
+            </div>
+            <div class="container-block" id="laptops-block">
+                <h1 class="container-block-h1">Laptops</h1>
+                <select id="LaptopList"></select>
+                <h4>Features:</h4>
+                <ul id="Laptops"></ul>               
+            </div>
+            <div class="shop-block">
+                <img class="image" id="LaptopPhoto" src="" alt="Image is not available"></img>
+                <p id="LaptopName"></p>
+                <p id="LaptopDescription"></p>
+                <p id="LaptopPrice"></p>
+                <button id="BuyNowButton">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>   
+</body>
+</html>

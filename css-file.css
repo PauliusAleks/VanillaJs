@@ -1,0 +1,25 @@
+.header {
+    text-align: center;
+    background-color: beige;
+    font-size: x-large;
+    font-style: oblique;
+}
+.container-block {
+    float : left;
+    padding:20px;
+    margin-left: 20px;
+}
+
+.container-block-h1{
+    text-align: left;
+}
+
+.shop-block{
+    display:grid
+}
+
+.image {
+    height: 150px;
+    width: 150px;
+}
+

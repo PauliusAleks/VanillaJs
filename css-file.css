@@ -1,9 +1,7 @@
 .header {
     text-align: center;
-    background-color: beige;
-    font-size: x-large;
-    font-style: oblique;
-    padding: 0;
+    background-color: bisque;
+    font-size: 50px;   
 }
 
 .container {
@@ -11,15 +9,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 10px;
     font-size: medium;
 }
 
 .item {
    width: 31%;
-   padding: 10px;
    height: 300px; 
+   padding: 1%;
    background-color: beige;
+   border-style: ridge;
 }
 
 #item-4 {
@@ -41,7 +39,6 @@
     margin: 2px;
     font-size: large;
     border-radius: 10px;
-    
 }
 .button:hover {
     border-width: 3px;

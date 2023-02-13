@@ -13,7 +13,13 @@ let laptops = [];
 let selectedLaptop = laptops[0]
 
 fetch("https://hickory-quilled-actress.glitch.me/computers")
-    .then(response => response.json())
+    .then((response) => {
+        if(response.status === 200){
+            return response.json()
+        } else {
+            throw new Error("An error has occurred!")
+        }
+    })
     .then(data => laptops = data)
     .then(laptops => addLaptopsToList(laptops))
     .catch(e=>console.log(e))
@@ -39,7 +45,6 @@ const getLaptopProperties = (laptop) =>{
         ilElement.innerText = selectedLaptopSpecs[spec];
         LaptopsListElement.appendChild(ilElement)
     }
-
     LaptopPhotoElement.setAttribute("src","https://hickory-quilled-actress.glitch.me/" + laptop.image);
     LaptopNameElement.innerText = laptop.title;    
     LaptopDescriptionElement.innerText = laptop.description;   
@@ -48,7 +53,7 @@ const getLaptopProperties = (laptop) =>{
 
 export const handleLaptopListChange = e => {
     selectedLaptop = laptops[e.target.selectedIndex];
-    getLaptopProperties(selectedLaptop);   
+    getLaptopProperties(selectedLaptop);  
 }
 
 export const handleBuyNowButton = () => {

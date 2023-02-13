@@ -1,13 +1,13 @@
 import { balance, setBalance, NOKFormat, updateBankNumbers } from "./bank.js";
-
-const LaptopsElement = document.getElementById("LaptopList");
-const LaptopsListElement = document.getElementById("Laptops");
-const LaptopPhotoElement= document.getElementById("LaptopPhoto");
-const LaptopNameElement= document.getElementById("LaptopName");
-const LaptopDescriptionElement= document.getElementById("LaptopDescription");
-const LaptopPriceElement= document.getElementById("LaptopPrice");
-const BuyNowButtonElement= document.getElementById("BuyNowButton");
-
+import {
+LaptopsElement,
+LaptopsListElement,
+LaptopPhotoElement,
+LaptopNameElement,
+LaptopDescriptionElement,
+LaptopPriceElement
+}
+from "../app.js"
 
 let laptops = [];
 let selectedLaptop = laptops[0]
@@ -31,11 +31,6 @@ const addLaptopToList = (laptop) => {
     getLaptopProperties(laptops[0]);
 }
 
-const handleLaptopListChange = e => {
-    selectedLaptop = laptops[e.target.selectedIndex];
-    getLaptopProperties(selectedLaptop);   
-}
-
 const getLaptopProperties = (laptop) =>{
     const selectedLaptopSpecs = laptop.specs;
     LaptopsListElement.innerText = "";
@@ -51,7 +46,12 @@ const getLaptopProperties = (laptop) =>{
     LaptopPriceElement.innerText = NOKFormat(laptop.price);   
 }
 
-const handleBuyNowButton = () => {
+export const handleLaptopListChange = e => {
+    selectedLaptop = laptops[e.target.selectedIndex];
+    getLaptopProperties(selectedLaptop);   
+}
+
+export const handleBuyNowButton = () => {
     if(selectedLaptop.stock > 0){
         if(selectedLaptop.price <= balance){
             alert("Congrats champ you have bought this laptop!");
@@ -63,9 +63,5 @@ const handleBuyNowButton = () => {
         }
     } else {
         alert("Out of stock!")
-    }
-    
+    }   
 }
-
-LaptopsElement.addEventListener("change",handleLaptopListChange)
-BuyNowButtonElement.addEventListener("click", handleBuyNowButton)

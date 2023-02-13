@@ -1,9 +1,5 @@
 import {balance, setBalance, loan, setLoan, hasLoan, setHasLoan, NOKFormat, updateBankNumbers} from "./bank.js";
-
-const RepayLoanButtonElement = document.getElementById("RepayButton")
-const PayElement = document.getElementById("Pay");
-const BankButtonElement = document.getElementById("BankButton");
-const WorkButtonElement = document.getElementById("WorkButton");
+import {RepayLoanButtonElement,PayElement} from "../app.js"
 
 let pay = 0;
 
@@ -13,12 +9,12 @@ const setPay = (value) =>{
 
 const isLoanZero =() => loan === 0 ? setHasLoan(false) : setHasLoan(true);
 
-const handleWork = () => {
+export const handleWork = () => {
     setPay(pay + 100);
     updatePay();
 }
 
-const handleBankTransfer = ()=> {
+export const handleBankTransfer = ()=> {
     if(hasLoan){
         alert("You have a loan, 10% of your pay will go to the bank!")
         let payTenPercent = pay/10;
@@ -35,7 +31,7 @@ const handleBankTransfer = ()=> {
     updatePay();
 }
 
-const handleRepayLoanTransfer = () => {
+export const handleRepayLoanTransfer = () => {
     payLoan(pay);
     updateBankNumbers();
     updatePay();
@@ -55,12 +51,6 @@ const payLoan = payToBank => {
     setPay(0);
 }
 
-const handleShowHideRepayLoanButton = () => {
+export const handleShowHideRepayLoanButton = () => {
     hasLoan ? RepayLoanButtonElement.removeAttribute("hidden") : RepayLoanButtonElement.setAttribute("hidden","hidden")
 };
-
-document.onclick = handleShowHideRepayLoanButton
-
-WorkButtonElement.addEventListener("click",handleWork)
-BankButtonElement.addEventListener("click",handleBankTransfer)
-RepayLoanButtonElement.addEventListener("click", handleRepayLoanTransfer)

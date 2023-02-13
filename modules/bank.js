@@ -1,6 +1,4 @@
-const BalanceElement = document.getElementById("UserBalance");
-const LoanElement = document.getElementById("UserLoan");
-const LoanButtonElement = document.getElementById("GetLoanButton");
+import {BalanceElement, LoanElement} from "../app.js"
 
 let balance = 100;
 let loan = 0;
@@ -15,7 +13,7 @@ const setLoan = (value) => {
 const setHasLoan = (value) => {
     hasLoan = value;
 }
-const handleGetALoan = () => {
+export const handleGetALoan = () => {
     if(!hasLoan){
         let possibleLoan = Number(prompt("The maximum amount you can loan is: " + NOKFormat(balance * 2)))
         if(isValidLoan(possibleLoan)){
@@ -41,7 +39,5 @@ const updateBankNumbers = () => {
 const NOKFormat = (number) => {
     return new Intl.NumberFormat("eu-EU", {style:"currency", currency:"NOK"}).format(number);
 }
-
-LoanButtonElement.addEventListener("click", handleGetALoan);
 
 export {balance,setBalance, loan, setLoan, hasLoan, setHasLoan, NOKFormat, updateBankNumbers};

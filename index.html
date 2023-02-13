@@ -6,53 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css-file.css" type="text/css"/>
     <title>Komputer store</title>
-    <header class="header"><h1>Komputer Store</h1></header>
+    <header class="header">
+        <h1>Komputer Store</h1>
+    </header>
 </head>
 <body>
     <div>
         <div class="container">
-            <div class="container-block">    
-                <h1 class="container-block-h1">Joe Banker</h1>
+            <div class="item" id="item-1">    
+                <h1 class="flex-block-h1">Joe Banker</h1>
                 <p id="UserBalance">
-                    User Balance: 200,00 NOK
+                    User Balance: 100,00 NOK
                 </p>
-                <p id="UserLoan">
-                    
-                </p>
-                <p id="TotalBalance">
-                    
-                </p>
-                <button class="button" id="GetLoanButton">
+                <p id="UserLoan"></p>
+                <button class="bankButton" id="GetLoanButton">
                     Get a loan
                 </button>
             </div>
-            <div class="container-block">
-                <h1 class="container-block-h1">Work</h1>
+            <div class="item" id="item-2">
+                <h1 class="flex-block-h1">Work</h1>
                 <p id="Pay">
                     Pay: 0
                 </p>
-                <button class="button" id="BankButton">
+                <button class="workButton" id="BankButton">
                     Bank
                 </button>
-                <button class="button" id="WorkButton">
+                <button class="workButton" id="WorkButton">
                     Work
                 </button>
-                <button class="button" id="RepayButton" hidden>
+                <button class="workButton" id="RepayButton" hidden>
                     Repay Loan
                 </button>
             </div>
-            <div class="container-block" id="laptops-block">
-                <h1 class="container-block-h1">Laptops</h1>
+            <div class="item" id="item-3">
+                <h1 class="flex-block-h1">Laptops</h1>
                 <select id="LaptopList"></select>
                 <h4>Features:</h4>
-                <ul id="Laptops"></ul>               
+                <ul id="Laptops"></ul>              
             </div>
-            <div class="shop-block">
-                <img class="image" id="LaptopPhoto" src="" alt="Image is not available"></img>
-                <p id="LaptopName"></p>
-                <p id="LaptopDescription"></p>
-                <p id="LaptopPrice"></p>
-                <button id="BuyNowButton">Buy Now</button>
+            <div class="item" id="item-4">
+                <div class="shop-item">
+                    <img class="image" id="LaptopPhoto" src="" alt="Image is not available."></img>
+                </div>
+                <div class="shop-item">
+                    <h3 id="LaptopName"></h3>
+                    <p id="LaptopDescription"></p>
+                </div>
+                <div class="shop-item">
+                    <h3 id="LaptopPrice"></h3>
+                    <button id="BuyNowButton">Buy Now</button>
+                </div>
             </div>
         </div>
     </div>

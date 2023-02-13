@@ -60,6 +60,7 @@ const handleShowHideRepayLoanButton = () => {
 };
 
 document.onclick = handleShowHideRepayLoanButton
+
 WorkButtonElement.addEventListener("click",handleWork)
 BankButtonElement.addEventListener("click",handleBankTransfer)
 RepayLoanButtonElement.addEventListener("click", handleRepayLoanTransfer)

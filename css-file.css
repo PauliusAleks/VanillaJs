@@ -3,20 +3,67 @@
     background-color: beige;
     font-size: x-large;
     font-style: oblique;
-}
-.container-block {
-    float : left;
-    padding:20px;
-    margin-left: 20px;
-    border-style: dotted;
+    padding: 0;
 }
 
-.container-block-h1{
-    text-align: left;
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
-.shop-block{
-    display:grid
+.item {
+   width: 31%;
+   padding: 10px;
+   height: 300px; 
+   background-color: beige;
+}
+
+#item-4 {
+    display: inline-flex;
+    height: fit-content;
+    width: 100%;
+    gap: 5px;
+}
+.shop-item {
+    width: 30%;
+    text-align: center;
+}
+.bankButton {
+    width: 100%;
+    height: 30px;
+}
+
+.workButton {
+    width: 48.3%;
+    height: 30px;
+    margin: 2px;
+}
+
+#GetLoanButton {
+    background-color: pink;
+}
+
+#RepayButton {
+    width: 100%;
+    background-color: red;
+}
+#WorkButton {
+    background-color: yellow;
+}
+
+#BankButton {
+    background-color: green;
+}
+#BuyNowButton {
+    width: 33%;
+    height: 40px;
+}
+
+.flex-block-h1{
+    text-align: center
 }
 
 .image {

@@ -15,7 +15,8 @@ let selectedLaptop = laptops[0]
 fetch("https://hickory-quilled-actress.glitch.me/computers")
     .then(response => response.json())
     .then(data => laptops = data)
-    .then(laptops => addLaptopsToList(laptops));
+    .then(laptops => addLaptopsToList(laptops))
+    .catch(e=>console.log(e))
 
 const addLaptopsToList = (laptops) => {
     laptops.forEach(laptop => addLaptopToList(laptop));

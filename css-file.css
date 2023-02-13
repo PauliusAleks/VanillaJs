@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px;
+    font-size: medium;
 }
 
 .item {
@@ -23,7 +24,7 @@
 
 #item-4 {
     display: inline-flex;
-    height: fit-content;
+    height: 150px;
     width: 100%;
     gap: 5px;
 }
@@ -31,32 +32,43 @@
     width: 30%;
     text-align: center;
 }
-.bankButton {
-    width: 100%;
-    height: 30px;
-}
 
-.workButton {
-    width: 48.3%;
+.selectList {
+    font-size: medium;
+}
+.button {
     height: 30px;
     margin: 2px;
+    font-size: large;
+    border-radius: 10px;
+    
 }
-
+.button:hover {
+    border-width: 3px;
+    filter:brightness(90%)
+}
+.button:active{
+    transform: scale(0.95);
+}
 #GetLoanButton {
     background-color: pink;
+    width: 100%;
+}
+#WorkButton {
+    background-color: yellow;
+    width: 48.3%;
+}
+
+#BankButton {
+    background-color: green;
+    width: 48.3%;
 }
 
 #RepayButton {
     width: 100%;
     background-color: red;
 }
-#WorkButton {
-    background-color: yellow;
-}
 
-#BankButton {
-    background-color: green;
-}
 #BuyNowButton {
     width: 33%;
     height: 40px;

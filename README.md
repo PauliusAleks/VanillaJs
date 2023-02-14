@@ -47,7 +47,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#installation"></a></li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#maintainers">Maintainers</a></li>
@@ -79,6 +79,19 @@ Created by Paulius Aleksandravicius.
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]-->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Installation -->
+### Installation
+
+1. Download VS Code [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)
+2. Clone the repo
+   ```sh
+   git clone https://gitlab.com/PauliusAle/VanillaJSAssignment.git
+   ```
+3. Install required Extensions.
+4. Run live server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

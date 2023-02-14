@@ -33,8 +33,8 @@ export const handleBankTransfer = ()=> {
         setPay(0);    
     }
     isLoanZero(); // checks whether the loan is still zero after transferring.
-    updateBankNumbers();//updates UI.
-    updatePay();//updates UI
+    updateBankNumbers();//updates DOM.
+    updatePay();//updates DOM.
 }
 
 //function to deduct all of the pay from the loan.

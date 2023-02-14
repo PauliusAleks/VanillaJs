@@ -2,7 +2,7 @@ import { balance, setBalance, NOKFormat, updateBankNumbers } from "./bank.js"; /
 //Importing DOM elements from app.js
 import {
 LaptopsElement,
-LaptopsListElement,
+LaptopsSpecsElement,
 LaptopPhotoElement,
 LaptopNameElement,
 LaptopDescriptionElement,
@@ -15,7 +15,7 @@ let selectedLaptop = laptops[0] //Initially setting selectedLaptop to first lapt
 
 //API fetch call to GET all computers from given Endpoint.
 fetch("https://hickory-quilled-actress.glitch.me/computers")
-    .then((response) => { // if response is 200(OK)
+    .then((response) => { // if response is 200(OK) return data.
         if(response.status === 200){
             return response.json()
         } else {
@@ -35,7 +35,7 @@ const addLaptopsToList = (laptops) => {
 const addLaptopToList = (laptop) => {
     const LaptopElement = document.createElement("option"); //Element in Select
     LaptopElement.value = laptop.title; //Setting its value to laptop's title.
-    LaptopElement.appendChild(document.createTextNode(laptop.title)); //Appending title to the laptopElement
+    LaptopElement.appendChild(document.createTextNode(laptop.title)); //Appending title to be the value in laptopElement
     LaptopsElement.appendChild(LaptopElement); //Appending LaptopElement to the Laptops Select List.
     selectedLaptop = laptops[0]; //Setting selected laptop to the first laptop in the laptops list.
     getLaptopProperties(laptops[0]); //Getting laptop properties of the initially selected laptop when the page is rendered.
@@ -43,13 +43,13 @@ const addLaptopToList = (laptop) => {
 
 //Function to fetch properties of a laptop
 const getLaptopProperties = (laptop) =>{
-    LaptopsListElement.innerText = ""; //Setting current content of DOM UL to empty.
+    LaptopsSpecsElement.innerText = ""; //Setting current content of DOM UL to empty.
     const selectedLaptopSpecs = laptop.specs;//defining object with specs of a laptop
     for(const spec in selectedLaptopSpecs){ // looping through every spec in the list.
         const ilElement = document.createElement("li"); //Creating DOM LI
         ilElement.setAttribute("key",laptop.id); //Setting key of an UL item to laptop's id
         ilElement.innerText = selectedLaptopSpecs[spec]; //Setting DOM LI content to current spec in the loop.
-        LaptopsListElement.appendChild(ilElement) //Adding DOM LI to DOM UL
+        LaptopsSpecsElement.appendChild(ilElement) //Adding DOM LI to DOM UL
     }
     LaptopPhotoElement.setAttribute("src","https://hickory-quilled-actress.glitch.me/" + laptop.image); //Setting image to laptops URL.
     LaptopNameElement.innerText = laptop.title; //Setting DOM LaptopNameElement text to laptop's title.   

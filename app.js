@@ -17,7 +17,7 @@ export const WorkButtonElement = document.getElementById("WorkButton");
 
 //Laptops DOM ELEMENTS
 export const LaptopsElement = document.getElementById("LaptopList");
-export const LaptopsListElement = document.getElementById("Laptops");
+export const LaptopsSpecsElement = document.getElementById("Laptops");
 export const LaptopPhotoElement= document.getElementById("LaptopPhoto");
 export const LaptopNameElement= document.getElementById("LaptopName");
 export const LaptopDescriptionElement= document.getElementById("LaptopDescription");
